@@ -1,0 +1,11 @@
+set nocompatible
+set backspace=2
+set number
+set hls
+set tabstop=2
+set autoindent
+set cursorline
+set encoding=utf8
+set background=dark
+syntax on
+colorscheme default
