@@ -14,3 +14,10 @@ alias checkout='git checkout'
 alias status='git status'
 alias p='python3'
 alias djan='p manage.py runserver'
+
+#self define function for git add commit push
+acp(){
+    add;
+    commit "$1";
+    push;
+}
