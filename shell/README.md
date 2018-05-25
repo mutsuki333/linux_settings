@@ -2,8 +2,16 @@
 
 **tree**
 To get the directory structure of `PATH`.
-Install
+Installation
 For ubantu
-```sudo apt-get install tree```
+```shell
+sudo apt-get install tree
+```
 For OSX
-```brew install tree```
+```shell
+brew install tree
+```
+flags|utility
+-------------
+-d|show only directory
+-L #|# is replaced by the max recursivity level.
