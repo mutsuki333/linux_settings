@@ -1,5 +1,6 @@
-# This repo is to take notes on basic linux settings and useful tips
+# This repo is to take notes on basic linux settings and useful tips.
 
+`tree .`
 ```shell
 .
 ├── README.md
