@@ -1,6 +1,6 @@
 # Frequently used commands
 
-**tree**
+## **tree**
 To get the directory structure of `PATH`.
 Installation
 For ubantu
@@ -12,7 +12,7 @@ For OSX
 brew install tree
 ```
 flags|utility
--------------
+-----|-------
 -d|show only directory
 ---|---
 -L #|# is replaced by the max recursivity level.
