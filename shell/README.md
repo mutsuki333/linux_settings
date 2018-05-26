@@ -14,4 +14,5 @@ brew install tree
 flags|utility
 -------------
 -d|show only directory
+---|---
 -L #|# is replaced by the max recursivity level.
