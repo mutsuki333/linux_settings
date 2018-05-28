@@ -6,7 +6,7 @@ Log in as another user.
 **Add user**
 `sudo adduser USERNAME`
 To grant it super user privilege
-`sudo -aG sudo USERNAME`
+`sudo -aG sudo USERNAME` or `sudo adduser USERNAME sudo`
 **Password**
 To change the root password:
 `sudo passwd`
