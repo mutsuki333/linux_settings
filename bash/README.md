@@ -47,8 +47,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 ```
-
-## Setting all the aliases in another files
+**Setting the aliases in another file**
 set `alias rm='rm -i'` to replace rm to avoide error removing
 By using `$1`, `$2` to get paramaters or `$@` to get list
 ```shell
@@ -59,3 +58,13 @@ junk() {
     done;
 }
 ```
+
+## To make tab auto-completion case-insensitive in the terminal
+```shell
+# If ~./inputrc doesn't exist yet, first include the original /etc/inputrc so we don't override it
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+# Add option to ~/.inputrc to enable case-insensitive tab completion
+echo 'set completion-ignore-case On' >> ~/.inputrc
+```
+to make this change for all users, edit `/etc/inputrc`
