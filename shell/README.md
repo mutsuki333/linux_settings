@@ -28,9 +28,10 @@ or\
 
 **Change mode**\
 ```chmod [-R] xyz DIR/FILE```\
-`-R` for recursive, `xyz` for user mod\
+`-R` for recursive, `xyz` for user mod
+
 utility|flag|num
---|--|--
+-------|----|--
 read|r|4
 write|w|2
 execute|x|1
