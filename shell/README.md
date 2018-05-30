@@ -18,31 +18,21 @@ To change other users password:\
 ## **File permission settings**
 
 **Change group**
-```
-chgrp GROUP [-R] DIR/FILE
-```
+```chgrp GROUP [-R] DIR/FILE```\
 `-R` for recursive
 
 **Change owner**
-```
-chown [-R] USER DIR/FILE
-```
-or
-```
-chown [-R] USER.GROUP DIR/FILE
-```
-or
-```
-chown [-R] USER:GROUP DIR/FILE
-```
+```chown [-R] USER DIR/FILE```\
+or\
+```chown [-R] USER.GROUP DIR/FILE```\
+or\
+```chown [-R] USER:GROUP DIR/FILE```\
 `-R` for recursive
 
 **Change mode**
-```
-chmod [-R] xyz DIR/FILE
-```
-`-R` for recursive, `xyz` for user mod
-
+```chmod [-R] xyz DIR/FILE```\
+`-R` for recursive, `xyz` for user mod\
+utility|flag|num  id|flag
 --|--|--          --|--
 read|r|4          owner|o
 write|w|2         group|g
