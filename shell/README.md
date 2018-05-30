@@ -44,7 +44,7 @@ execute|x|1
 
 id|flag
 --|--
-owner|o
+user|u
 group|g
 other|o
 all|a
