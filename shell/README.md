@@ -8,20 +8,17 @@ Log in as another user.\
 To grant it super user privilege\
 `sudo -aG sudo USERNAME` or `sudo adduser USERNAME sudo`\
 **Password**\
-To change the root password:\
-`sudo passwd`\
-To change your user password:\
-`passwd`\
-To change other users password:\
-`sudo passwd USERNAME`\
+Root password: `sudo passwd`\
+User password: `passwd`\
+Other users password: `sudo passwd USERNAME`
 
 ## **File permission settings**
 
-**Change group**
+**Change group**\
 ```chgrp GROUP [-R] DIR/FILE```\
 `-R` for recursive
 
-**Change owner**
+**Change owner**\
 ```chown [-R] USER DIR/FILE```\
 or\
 ```chown [-R] USER.GROUP DIR/FILE```\
@@ -29,15 +26,21 @@ or\
 ```chown [-R] USER:GROUP DIR/FILE```\
 `-R` for recursive
 
-**Change mode**
+**Change mode**\
 ```chmod [-R] xyz DIR/FILE```\
 `-R` for recursive, `xyz` for user mod\
-utility|flag|num  id|flag
---|--|--          --|--
-read|r|4          owner|o
-write|w|2         group|g
-execute|x|1       other|o
-                  all|a
+utility|flag|num
+--|--|--
+read|r|4
+write|w|2
+execute|x|1
+
+id|flag
+--|--
+owner|o
+group|g
+other|o
+all|a
 
 ## **tree**
 To get the directory structure of `PATH`.
