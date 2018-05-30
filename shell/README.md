@@ -1,7 +1,7 @@
 # Frequently used commands
 
 ## **User managment**
-Log in as another user.
+Log in as another user. <br/>
 `su - USERNAME`
 **Add user**
 `sudo adduser USERNAME`
@@ -13,7 +13,7 @@ To change the root password:
 To change your user password:
 `passwd`
 To change other users password:
-`sudo passwd USERNAME`    
+`sudo passwd USERNAME`
 
 ## **File permission settings**
 
