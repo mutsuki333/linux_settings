@@ -2,7 +2,7 @@
 
 ## **User managment**
 Log in as another user. <br/>
-`su - USERNAME`
+`su - USERNAME`      
 **Add user**
 `sudo adduser USERNAME`
 To grant it super user privilege
