@@ -1,11 +1,11 @@
 # Frequently used commands
 
 ## **User managment**
-Log in as another user. <br/>
-`su - USERNAME`      
+Log in as another user.
+`su - USERNAME`
 **Add user**
 `sudo adduser USERNAME`
-To grant it super user privilege
+To grant it super user privilege      
 `sudo -aG sudo USERNAME` or `sudo adduser USERNAME sudo`
 **Password**
 To change the root password:
