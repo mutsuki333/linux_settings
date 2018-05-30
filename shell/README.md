@@ -13,21 +13,31 @@ To change the root password:
 To change your user password:
 `passwd`
 To change other users password:
-`sudo passwd USERNAME`
+`sudo passwd USERNAME`  
 
 ## **File permission settings**
 **Change group**
-```chgrp GROUP [-R] DIR/FILE```
+```
+chgrp GROUP [-R] DIR/FILE
+```
 `-R` for recursive
 **Change owner**
-```chown [-R] USER DIR/FILE```
+```
+chown [-R] USER DIR/FILE
+```
 or
-```chown [-R] USER.GROUP DIR/FILE```
+```
+chown [-R] USER.GROUP DIR/FILE
+```
 or
-```chown [-R] USER:GROUP DIR/FILE```
+```
+chown [-R] USER:GROUP DIR/FILE
+```
 `-R` for recursive
 **Change mode**
-```chmod [-R] xyz DIR/FILE```
+```
+chmod [-R] xyz DIR/FILE
+```
 `-R` for recursive, `xyz` for user mod
 
 --|--|--          --|--
