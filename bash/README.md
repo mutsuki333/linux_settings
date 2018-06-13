@@ -48,7 +48,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 ```
 **Setting the aliases in another file**
-set `alias rm='rm -i'` to replace rm to avoide error removing
+set `alias rm='rm -i'` to replace rm to avoide error removing  
 By using `$1`, `$2` to get paramaters or `$@` to get list
 ```shell
 junk() {
