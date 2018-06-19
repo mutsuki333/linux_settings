@@ -49,6 +49,22 @@ group|g
 other|o
 all|a
 
+## **Shell tab auto-complete case-insensitive**  
+Open a terminal, run
+```shell
+# If ~./inputrc doesn't exist yet, first include the original /etc/inputrc so we don't override it
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+
+
+# Add option to ~/.inputrc to enable case-insensitive tab completion
+echo 'set completion-ignore-case On' >> ~/.inputrc
+```
+Start a new shell / terminal.
+
+to make this change for all users, edit `/etc/inputrc`.
+
+
+
 ## **tree**
 To get the directory structure of `PATH`.
 Installation
