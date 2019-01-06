@@ -1,0 +1,28 @@
+#!/bin/bash
+
+NAME="vendor-app"                                  # Name of the application
+VENDORAPPDIR=/home/ubuntu/IIM_108_Project/server
+SOCKFILE=/home/ubuntu/gunicorn_conf/run/gunicorn.sock  # we will communicte using this unix socket
+USER=ubuntu                                     # the user to run as
+GROUP=ubuntu                                     # the group to run as
+NUM_WORKERS=3                                    # how many worker processes should Gunicorn spawn
+#NUM_WORKERS=1
+APP=app
+echo "Starting $NAME as `whoami`"
+
+# Activate the virtual environment
+cd $VENDORAPPDIR
+source ENV/bin/activate
+
+# Create the run directory if it doesn't exist
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+# Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
+exec ENV/bin/gunicorn ${APP}:app \
+  --name $NAME \
+  --workers $NUM_WORKERS \
+  --bind=unix:$SOCKFILE \
+  --user=$USER --group=$GROUP \
+  --log-level=debug \
+  --log-file=-

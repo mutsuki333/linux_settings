@@ -1,9 +1,14 @@
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
 alias c='clear'
 alias cd..='cd ..'
 alias clr='clear'
 alias ..='cd ..'
 alias lsa='ls -a'
-alias ll='ls -l'
 alias rm='rm -i'
 alias v='vim'
 alias add='git add -A'
@@ -13,11 +18,18 @@ alias pull='git pull'
 alias checkout='git checkout'
 alias status='git status'
 alias p='python3'
-alias djan='p manage.py runserver'
 
 #self define function for git add commit push
 acp(){
     add;
     commit "$1";
     push;
+}
+
+#Trashing
+del() {
+    for item in "$@" ;
+      do echo "Trashing: $item" ;
+      mv "$item" ~/.Trash/;
+    done;
 }
