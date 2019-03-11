@@ -1,7 +1,9 @@
 :inoremap { {<CR>}<ESC>O
 :inoremap ( ()<ESC>i
 :inoremap [ []<ESC>i
-":inoremap { {}<ESC>i
+:inoremap ' ''<ESC>i
+:inoremap " ""<ESC>i
+:inoremap ` ``<ESC>i
 nnoremap <Tab> <c-w>w
 nnoremap <bs> <c-w>W
 
@@ -26,6 +28,7 @@ set ruler
 set showmode
 
 nnoremap <F2> :set nonumber!<CR>
+set pastetoggle=<F3>
 
 set nowrap
 

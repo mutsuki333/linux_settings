@@ -1,6 +1,7 @@
 # Bash settings
 
 ## Basic settings
+
 **Color settings**
 ```shell
 export LSCOLORS="gxfxcxdxbxegedabagacad"
@@ -10,7 +11,6 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 ```shell
 PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\033[01;34m\]\W\[\033[00m\]$(git_info)\[\033[00m\]\n\[\033[1;31m\]\$ \[\033[00m\]'
 ```
-
 
 **Git status**
 ```shell

@@ -80,3 +80,13 @@ flags|utility
 -----|-------
 -d|show only directory
 -L #|# is replaced by the max recursivity level.
+
+## System net conntection
+Get ip info
+```shell
+curl ipinfo.io
+```
+
+```shell
+ifconfig
+```
