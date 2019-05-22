@@ -1,4 +1,8 @@
-# Bash settings
+# Bash settings <!-- omit in toc -->
+
+- [Basic settings](#basic-settings)
+- [To make tab auto-completion case-insensitive in the terminal](#to-make-tab-auto-completion-case-insensitive-in-the-terminal)
+- [env var](#env-var)
 
 ## Basic settings
 
@@ -68,3 +72,13 @@ if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
 echo 'set completion-ignore-case On' >> ~/.inputrc
 ```
 to make this change for all users, edit `/etc/inputrc`
+
+## env var
+utility | cmd
+-|-
+list all env var | `printenv`  
+list all var | `set` or `set | less` or `set | grep VAR`  
+accessing the value of any shell or environmental variable. | `echo $VAR`
+export to env | `export VAR`
+remove from env | `export -n VAR`
+remove var | `unset VAR`

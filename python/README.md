@@ -1,36 +1,37 @@
-# Python notes
+# Python notes <!-- omit in toc -->
 
-- [Python notes](#python-notes)
-  - [pip](#pip)
-    - [Python requirements](#python-requirements)
-    - [Virtual environment](#virtual-environment)
-  - [Python syntax, utilities](#python-syntax-utilities)
-    - [basic syntax](#basic-syntax)
-      - [number](#number)
-      - [Triple Quotes](#triple-quotes)
-      - [format method](#format-method)
-      - [Escape Sequences](#escape-sequences)
-      - [Raw string](#raw-string)
-      - [operators](#operators)
-      - [Statements](#statements)
-      - [DocStrings](#docstrings)
-      - [Data Structure](#data-structure)
-      - [Class](#class)
-      - [IO, FileIO](#io-fileio)
-      - [Handling Exceptions](#handling-exceptions)
-      - [Decorators](#decorators)
-    - [Useful tips](#useful-tips)
-    - [Pickle](#pickle)
-    - [sys](#sys)
-    - [Math](#math)
-    - [float calculations may be inaccurate](#float-calculations-may-be-inaccurate)
-    - [Numpy](#numpy)
-  - [Server](#server)
-    - [Simple server can be used with](#simple-server-can-be-used-with)
-    - [Gunicorn](#gunicorn)
-    - [Editting a bash script to start Gunicorn](#editting-a-bash-script-to-start-gunicorn)
-    - [Starting and monitoring with Supervisor](#starting-and-monitoring-with-supervisor)
-    - [Nginx](#nginx)
+- [decimal (.) precision of 3 for float '0.333'](#decimal--precision-of-3-for-float-0333)
+- [fill with underscores (_) with the text centered](#fill-with-underscores--with-the-text-centered)
+- [(^) to 11 width '___hello___'](#to-11-width-hello)
+- [is the same as](#is-the-same-as)
+- [use raw strings when dealing with regular expressions.](#use-raw-strings-when-dealing-with-regular-expressions)
+- [or a lot of backwhacking may be required.](#or-a-lot-of-backwhacking-may-be-required)
+- [if else while for](#if-else-while-for)
+- [Function](#function)
+- [block belonging to the function](#block-belonging-to-the-function)
+- [End of function](#end-of-function)
+- [prints a blank line](#prints-a-blank-line)
+- [Works for both Teachers and Students](#works-for-both-teachers-and-students)
+- [Open for 'w'riting](#open-for-writing)
+- [Write text to file](#write-text-to-file)
+- [Close the file](#close-the-file)
+- [If no mode is specified,](#if-no-mode-is-specified)
+- ['r'ead mode is assumed by default](#read-mode-is-assumed-by-default)
+- [close the file](#close-the-file)
+- [encoding=utf-8](#encodingutf-8)
+- [The name of the file where we will store the object](#the-name-of-the-file-where-we-will-store-the-object)
+- [The list of things to buy](#the-list-of-things-to-buy)
+- [Write to the file](#write-to-the-file)
+- [Dump the object to a file](#dump-the-object-to-a-file)
+- [Destroy the shoplist variable](#destroy-the-shoplist-variable)
+- [Read back from the storage](#read-back-from-the-storage)
+- [Load the object from the file](#load-the-object-from-the-file)
+- [create a new variable 'a'](#create-a-new-variable-a)
+- [delete/remove a name](#deleteremove-a-name)
+- [Activate the virtual environment](#activate-the-virtual-environment)
+- [Create the run directory if it doesn't exist](#create-the-run-directory-if-it-doesnt-exist)
+- [Start your Django Unicorn](#start-your-django-unicorn)
+- [Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)](#programs-meant-to-be-run-under-supervisor-should-not-daemonize-themselves-do-not-use---daemon)
 
 ## pip
 
@@ -52,6 +53,19 @@ setup|`virtualenv ENV`
 access to the global site-packages|with flag `--system-site-packages`
 start|`source bin/activate`
 stop|`deactivate`
+
+To make matplotlib work with virtualenv.
+Start the code with:
+```python
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+```
+Or add the following in a config:
+```bash
+$ cat ~/.matplotlib/matplotlibrc
+backend: TkAgg
+```
 
 ## Python syntax, utilities
 
@@ -168,7 +182,7 @@ type|utility
 -|-
 List|`shoplist = ['apple', 'mango', 'carrot', 'banana']` <br>`for...in`, `append()`, `sort()`, or `help(list)` for help.
 Tuple | `zoo = ('python', 'elephant', 'penguin')`
-Dictionary|`d = {key1 :value1, key2 : value2 }`, `del d['key']`
+Dictionary| `d = {key1 :value1, key2 : value2 }`, `del d['key']`
 Set | `bri = set(['brazil', 'russia', 'india'])`<br>`'india' in bri  #True`,<br>`'usa' in bri  #False`
 
 #### Class
@@ -416,6 +430,11 @@ f.close()
 ### sys
 
 `sys.argv`, `sys.path`, `dir()`
+```python
+import sys
+
+print(sys.argv[1])
+```
 
 ```python
 # create a new variable 'a'
@@ -457,6 +476,22 @@ Decimal('0.1428571428571428571428571429')
 ```
 
 ### Numpy
+
+[Quick start tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html)
+
+### matplotlib
+
+[gallery](https://matplotlib.org/gallery/index.html#gallery)  
+[pyplot overview](https://matplotlib.org/api/pyplot_summary.html)  
+[Tutorial](https://matplotlib.org/tutorials/introductory/pyplot.html)
+
+Using in osx virtualenv
+```python
+import matplotlib
+matplotlib.use('TkAgg')
+from matplotlib import pyplot as plt
+```
+
 
 ## Server
 
